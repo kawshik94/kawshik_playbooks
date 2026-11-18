@@ -5,5 +5,12 @@
   vars:
     user: kawshik
 
-  tasks:
+  tasks: 
+    - name: creating a file with my name
+      file: 
+        path: "/tmp/{{ user }}_logs.txt"
+        owner: kawshik
+        group: kawshik
+        mode: '0644'
+        state: touch
 
